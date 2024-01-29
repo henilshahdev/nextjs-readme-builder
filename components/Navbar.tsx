@@ -32,34 +32,28 @@ const Navbar = () => {
 						</button>
 					</div>
 				</div>
-				<div className={`${isNavOpen ? "block px-4 pt-2 pb-4" : "hidden"} sm:flex sm:p-0 sm:items-center`}>
+				<div className={`${isNavOpen ? "block px-5 pt-2 pb-4" : "hidden"} sm:flex sm:p-0 sm:items-center`}>
 					<a
 						href="#"
-						className="block px-2 py-2 mt-1 sm-mt-0 text-white font-semibold rounded hover:bg-gray-700"
+						className="block px-2 py-2 mt-0  sm-mt-0 text-white font-semibold rounded hover:bg-gray-700"
 					>
 						Templates
 					</a>
 					<a
 						href="#"
-						className="block px-2 py-2 mt-1 sm-mt-0 sm:ml-3 text-white font-semibold rounded hover:bg-gray-700"
+						className="block px-2 py-2 mt-2 md:mt-0 sm:ml-3 md:ml-6 text-white font-semibold rounded hover:bg-gray-700"
 					>
 						Collections
 					</a>
 					<a
 						href="#"
-						className="block px-2 py-2 mt-1 sm-mt-0 sm:ml-3 text-white font-semibold rounded hover:bg-gray-700"
+						className="block px-2 py-2 mt-2 md:mt-0 sm:ml-3 md:ml-6 text-white font-semibold rounded hover:bg-gray-700"
 					>
 						Support
 					</a>
 					<a
 						href="#"
-						className="block px-2 py-2 mt-1 sm-mt-0 sm:ml-3 text-white font-semibold rounded hover:bg-gray-700"
-					>
-						About
-					</a>
-					<a
-						href="#"
-						className="block px-2 py-2 mt-1 sm-mt-0 sm:ml-3 text-white font-semibold rounded bg-green-600 hover:opacity-85"
+						className="block px-2 md:px-4 py-2 mt-2 md:mt-0 sm:ml-3 md:ml-8 text-white font-semibold rounded bg-green-600 hover:opacity-85"
 					>
 						Log In
 					</a>
