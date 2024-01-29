@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
 	const features = [
@@ -63,9 +64,12 @@ const Hero = () => {
 					<button className="border-2 border-green-600 bg-green-600 rounded text-white hover:opacity-75 px-4 py-2 md:px-8 md:py-4">
 						Get Started
 					</button>
-					<button className="mt-4 md:mt-0 bg-gray-900 border-2 border-gray-900 rounded text-white hover:opacity-75 hover:text-white px-4 py-2 md:px-8 md:py-4">
+					<Link
+						href="/templates"
+						className="mt-4 md:mt-0 bg-gray-900 border-2 border-gray-900 rounded text-white text-center hover:opacity-75 hover:text-white px-4 py-2 md:px-8 md:py-4"
+					>
 						Browse Templates
-					</button>
+					</Link>
 				</div>
 			</div>
 			<div className="py-16 bg-gray-900 text-white">

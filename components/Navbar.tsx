@@ -56,8 +56,8 @@ const Navbar = () => {
 								setIsNavOpen(false);
 							}}
 							key={index}
-							className={`block px-2 py-2 mt-0 sm-mt-0 sm:ml-3 md:ml-6 text-white font-semibold rounded hover:bg-gray-700 link ${
-								pathname === navLink.routePath ? "bg-white text-gray-900" : ""
+							className={`block px-2 py-2 mt-0 sm-mt-0 sm:ml-3 md:ml-6  font-semibold rounded hover:bg-gray-700 hover:text-white link ${
+								pathname === navLink.routePath ? "bg-white text-gray-900" : "text-white"
 							}`}
 							href={navLink.routePath}
 						>
