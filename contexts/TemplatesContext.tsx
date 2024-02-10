@@ -3,82 +3,90 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 type TemplateType = {
 	title: string;
 	description: string;
-	filters: string[];
 };
 
 type TemplatesContextType = {
-	allTemplates: TemplateType[];
-	currentTemplate: number;
-	setCurrentTemplate: (newTemplate: number) => void;
-	finalTemplates: [string, string];
-	setFinalTemplates: (arr: [string, string]) => void;
+	templates: TemplateType[];
+	currentTemplate: string;
+	setCurrentTemplate: (newTemplate: string) => void;
 };
 
-const allTemplates: TemplateType[] = [
-	{
-		title: "Basic",
-		description: "Basic templates",
-		filters: ["All", "Internal", "Open Source", "Instructor", "Onboarding"],
-	},
-	{
-		title: "Profile",
-		description: "Templates categorized by profile level",
-		filters: ["All", "Basic", "Intermediate", "Advanced"],
-	},
-	{
-		title: "General",
-		description: "General purpose templates",
-		filters: ["All", "Basic", "Minimalist", "Comprehensive"],
-	},
-	{
-		title: "Language",
-		description: "Templates based on programming language",
-		filters: ["All", "JavaScript / TypeScript", "Python", "Java", "Dart", "PHP", "C / C++"],
-	},
-	{
-		title: "Framework",
-		description: "Templates based on framework",
-		filters: ["All", "React.js", "Next.js", "Angular.js", "Vue.js", "Flutter", "Android / iOS"],
-	},
-	{
-		title: "Project",
-		description: "Templates based on project title",
-		filters: ["All", "Web App", "Mobile App", "API", "Library"],
-	},
-	{
-		title: "Documentation",
-		description: "Documentation templates",
-		filters: ["All", "Tutorials", "Setup", "User Guide"],
-	},
-	{
-		title: "Specialized",
-		description: "Specialized templates",
-		filters: ["All", "Data Science", "Machine Learning", "Dev Ops", "Infrastructure"],
-	},
-];
-
 const TemplatesContext = createContext<TemplatesContextType>({
-	allTemplates: allTemplates,
-	currentTemplate: 0,
+	templates: [],
+	currentTemplate: "Basic",
 	setCurrentTemplate: () => {},
-	finalTemplates: ["", ""],
-	setFinalTemplates: () => {},
 });
 
 export const TemplatesProvider = ({ children }: { children: React.ReactNode }) => {
-	const [currentTemplate, setCurrentTemplate] = useState<number>(0);
-	const [finalTemplates, setFinalTemplates] = useState<[string, string]>(["Basic", ""]);
+	const [currentTemplate, setCurrentTemplate] = useState<string>("Basic");
+	const [templates, setTemplates] = useState<TemplateType[]>([]);
 
 	useEffect(() => {
-		console.log(finalTemplates);
-	}, [finalTemplates]);
+		console.log(currentTemplate);
+		switch (currentTemplate) {
+			case "Basic":
+				setTemplates([
+					{ title: "Open Source", description: "Open Source" },
+					{ title: "Instructor", description: "Instructor" },
+					{ title: "Onboarding", description: "Onboarding" },
+				]);
+				break;
+			case "Profile":
+				setTemplates([
+					{ title: "Basic", description: "Basic" },
+					{ title: "Intermediate", description: "Intermediate" },
+					{ title: "Advanced", description: "Advanced" },
+				]);
+				break;
+			case "Language":
+				setTemplates([
+					{ title: "JavaScript / TypeScript", description: "JavaScript / TypeScript" },
+					{ title: "Python", description: "Python" },
+					{ title: "Java", description: "Java" },
+					{ title: "Dart", description: "Dart" },
+					{ title: "PHP", description: "PHP" },
+					{ title: "C / C++", description: "C / C++" },
+				]);
+				break;
+			case "Profile":
+				setTemplates([
+					{ title: "Basic", description: "Basic" },
+					{ title: "Intermediate", description: "Intermediate" },
+					{ title: "Advanced", description: "Advanced" },
+				]);
+				break;
+			case "Framework":
+				setTemplates([
+					{ title: "React.js", description: "React.js" },
+					{ title: "Next.js", description: "Next.js" },
+					{ title: "Angular.js", description: "Angular.js" },
+					{ title: "Vue.js", description: "Vue.js" },
+					{ title: "Flutter", description: "Flutter" },
+					{ title: "Android / iOS", description: "Android / iOS" },
+				]);
+				break;
+			case "Project":
+				setTemplates([
+					{ title: "Web App", description: "Web App" },
+					{ title: "Mobile App", description: "Mobile App" },
+					{ title: "API", description: "API" },
+					{ title: "Library", description: "Library" },
+				]);
+				break;
+			case "Documentation":
+				setTemplates([
+					{ title: "Tutorials", description: "Tutorials" },
+					{ title: "Setup", description: "Setup" },
+					{ title: "User Guide", description: "User Guide" },
+				]);
+				break;
+		}
+	}, [currentTemplate]);
 
 	const value: TemplatesContextType = {
-		allTemplates,
+		templates,
 		currentTemplate,
 		setCurrentTemplate,
-		finalTemplates,
-		setFinalTemplates,
 	};
 
 	return <TemplatesContext.Provider value={value}>{children}</TemplatesContext.Provider>;
