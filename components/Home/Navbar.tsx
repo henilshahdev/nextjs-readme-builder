@@ -14,6 +14,7 @@ const Navbar = () => {
 	const navLinks = [
 		{ linkText: "Templates", routePath: "/templates" },
 		{ linkText: "Collections", routePath: "/collections" },
+		{ linkText: "Creators", routePath: "/creators" },
 		{ linkText: "Support", routePath: "/support" },
 	];
 

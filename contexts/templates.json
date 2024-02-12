@@ -1,0 +1,248 @@
+{
+	"templates": {
+		"Basic": [
+			{
+				"title": "Open Source",
+				"description": "Ideal for open-source projects, emphasizing licensing, contributions, and dependencies.",
+				"stars": 126,
+				"sections": 7,
+				"useCount": 245,
+				"creator": "Emily Johnson"
+			},
+			{
+				"title": "Instructor",
+				"description": "Tailored for instructors, showcasing expertise, teaching experience, and contact details.",
+				"stars": 92,
+				"sections": 6,
+				"useCount": 187,
+				"creator": "Daniel Brown"
+			},
+			{
+				"title": "Onboarding",
+				"description": "Designed for onboarding processes, outlining roles, timelines, and key resources.",
+				"stars": 57,
+				"sections": 7,
+				"useCount": 132,
+				"creator": "Sophia Lee"
+			}
+		],
+		"Profile": [
+			{
+				"title": "Basic",
+				"description": "A minimalistic profile highlighting essential personal and professional information.",
+				"stars": 312,
+				"sections": 4,
+				"useCount": 570,
+				"creator": "David Wilson"
+			},
+			{
+				"title": "Intermediate",
+				"description": "Offers a detailed overview of experience, education, achievements, and interests.",
+				"stars": 238,
+				"sections": 8,
+				"useCount": 423,
+				"creator": "Jessica Clark"
+			},
+			{
+				"title": "Advanced",
+				"description": "Comprehensive profile emphasizing expertise, achievements, and personal branding.",
+				"stars": 172,
+				"sections": 11,
+				"useCount": 312,
+				"creator": "Michael Taylor"
+			},
+			{
+				"title": "Professional",
+				"description": "Tailored for job applications or networking, focusing on key skills, projects, and achievements.",
+				"stars": 198,
+				"sections": 9,
+				"useCount": 385,
+				"creator": "Olivia Martinez"
+			},
+			{
+				"title": "Creative",
+				"description": "Visually appealing profile highlighting artistic talents, work samples, and creative interests.",
+				"stars": 143,
+				"sections": 8,
+				"useCount": 268,
+				"creator": "William Anderson"
+			},
+			{
+				"title": "Academic",
+				"description": "Focuses on academic background, research interests, publications, and awards.",
+				"stars": 212,
+				"sections": 8,
+				"useCount": 398,
+				"creator": "Sophie Roberts"
+			},
+			{
+				"title": "Social",
+				"description": "Designed for connecting with like-minded individuals based on shared interests and hobbies.",
+				"stars": 89,
+				"sections": 8,
+				"useCount": 173,
+				"creator": "Benjamin Green"
+			}
+		],
+		"Language": [
+			{
+				"title": "JavaScript / TypeScript",
+				"description": "An inclusive README template catering to JavaScript and TypeScript projects, featuring setup, syntax highlighting, and best practices.",
+				"stars": 541,
+				"sections": 0,
+				"useCount": 976,
+				"creator": "Anna Miller"
+			},
+			{
+				"title": "Python",
+				"description": "A comprehensive README template tailored for Python projects, including installation guidelines, code examples, and structure recommendations.",
+				"stars": 482,
+				"sections": 0,
+				"useCount": 843,
+				"creator": "Robert Harris"
+			},
+			{
+				"title": "Java",
+				"description": "Crafted for Java projects, this README template provides setup details, coding conventions, and testing methodologies.",
+				"stars": 391,
+				"sections": 0,
+				"useCount": 702,
+				"creator": "Emma Davis"
+			},
+			{
+				"title": "Dart",
+				"description": "Specifically designed for Dart projects, this README template includes installation steps, language and package management guidelines.",
+				"stars": 302,
+				"sections": 0,
+				"useCount": 526,
+				"creator": "John Thompson"
+			},
+			{
+				"title": "PHP",
+				"description": "Tailored for PHP projects, this README template covers installation procedures, coding standards, and framework integrations.",
+				"stars": 247,
+				"sections": 0,
+				"useCount": 437,
+				"creator": "Sophia White"
+			},
+			{
+				"title": "C / C++",
+				"description": "Designed for C / C++ projects, this README template provides setup instructions, language fundamentals, and memory management insights.",
+				"stars": 198,
+				"sections": 0,
+				"useCount": 362,
+				"creator": "David Lee"
+			}
+		],
+		"Framework": [
+			{
+				"title": "React.js",
+				"description": "For React.js projects, this README template offers installation guidance, usage samples, and contribution protocols.",
+				"stars": 487,
+				"sections": 0,
+				"useCount": 853,
+				"creator": "James Wilson"
+			},
+			{
+				"title": "Next.js",
+				"description": "Tailored for Next.js projects, this README template provides setup insights, deployment strategies, and recommended practices.",
+				"stars": 342,
+				"sections": 0,
+				"useCount": 609,
+				"creator": "Sophie Garcia"
+			},
+			{
+				"title": "Angular.js",
+				"description": "Specifically designed for Angular.js projects, this README template covers configuration details, testing instructions, and version compatibility.",
+				"stars": 289,
+				"sections": 0,
+				"useCount": 512,
+				"creator": "Andrew Smith"
+			},
+			{
+				"title": "Vue.js",
+				"description": "Tailored for Vue.js projects, this README template features project structure, component documentation, and troubleshooting insights.",
+				"stars": 198,
+				"sections": 0,
+				"useCount": 362,
+				"creator": "Lily Johnson"
+			},
+			{
+				"title": "Flutter",
+				"description": "Crafted for Flutter projects, this README template outlines installation steps, widget catalog, and platform-specific considerations.",
+				"stars": 153,
+				"sections": 0,
+				"useCount": 276,
+				"creator": "Jack Brown"
+			},
+			{
+				"title": "Android / iOS",
+				"description": "Tailored for Android / iOS projects, this README template includes setup instructions, device compatibility, and release notes.",
+				"stars": 102,
+				"sections": 0,
+				"useCount": 186,
+				"creator": "Ava Wilson"
+			}
+		],
+		"Project": [
+			{
+				"title": "Web App",
+				"description": "Designed for web applications, this README template covers feature highlights, deployment steps, and browser compatibility.",
+				"stars": 396,
+				"sections": 0,
+				"useCount": 702,
+				"creator": "Noah Taylor"
+			},
+			{
+				"title": "Mobile App",
+				"description": "Tailored for mobile applications, this README template provides installation guidance, device requirements, and troubleshooting tips.",
+				"stars": 349,
+				"sections": 0,
+				"useCount": 612,
+				"creator": "Isabella Martinez"
+			},
+			{
+				"title": "API",
+				"description": "For APIs, this README template offers endpoint documentation, authentication details, and response examples.",
+				"stars": 276,
+				"sections": 0,
+				"useCount": 489,
+				"creator": "Ethan Clark"
+			},
+			{
+				"title": "Library",
+				"description": "Designed for libraries, this README template includes usage examples, dependency management, and versioning guidelines.",
+				"stars": 201,
+				"sections": 0,
+				"useCount": 359,
+				"creator": "Mia Brown"
+			}
+		],
+		"Documentation": [
+			{
+				"title": "Tutorials",
+				"description": "Crafted for tutorials, this README template provides step-by-step instructions, code snippets, and expected outcomes.",
+				"stars": 292,
+				"sections": 0,
+				"useCount": 519,
+				"creator": "Jacob Garcia"
+			},
+			{
+				"title": "Setup",
+				"description": "For setup guides, this README template covers system requirements, installation steps, and configuration options.",
+				"stars": 251,
+				"sections": 0,
+				"useCount": 447,
+				"creator": "Sophia Anderson"
+			},
+			{
+				"title": "User Guide",
+				"description": "Tailored for user guides, this README template includes feature descriptions, usage examples, and troubleshooting advice.",
+				"stars": 189,
+				"sections": 0,
+				"useCount": 337,
+				"creator": "Elijah Martinez"
+			}
+		]
+	}
+}

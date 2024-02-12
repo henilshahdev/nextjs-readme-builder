@@ -2,7 +2,10 @@
 
 import { useTemplatesContext } from "@/contexts/TemplatesContext";
 
+import Image from "next/image";
+
 import Filters from "@/components/Templates/Filters";
+import Link from "next/link";
 
 const Templates = () => {
 	const { templates } = useTemplatesContext();
@@ -10,35 +13,52 @@ const Templates = () => {
 	return (
 		<div className="max-w-[1200px] mx-auto py-6 md:py-16 px-6">
 			<Filters />
-			<div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+			<div className="grid grid-cols-1 md:grid-cols-3 flex-wrap gap-8 items-start">
 				{templates.map((template, index) => (
 					<div
 						key={index}
-						className="w-full max-w-sm p-4 bg-white border-2 border-gray-300 rounded-xl shadow sm:p-8 "
+						className="w-full max-w-sm p-4 bg-white border-2 border-gray-300 hover:border-gray-900 rounded-xl shadow sm:p-8 "
 					>
-						<h5 className="mb-4 text-lg text-gray-500">{template.title}</h5>
-						<ul role="list" className="space-y-5 my-7">
-							<li className="flex items-center">
-								<svg
-									className="flex-shrink-0 w-4 h-4 text-blue-600 "
-									aria-hidden="true"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-								</svg>
-								<span className="text-base font-normal leading-tight text-gray-500 ms-3">
-									{template.description}
-								</span>
-							</li>
-						</ul>
-						<button
-							type="button"
-							className="text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
-						>
-							Choose plan
-						</button>
+						<div className="flex justify-between items-center border-b-2 border-gray-900 pb-3">
+							<p className="text-xl">{template.title}</p>
+							<div className="bg-yellow-400 rounded-lg text-gray-900 font-semibold px-2 py-0.5">
+								<p className="flex">
+									{template.stars}
+									<Image
+										className="md:ml-1 text-white"
+										src="/assets/star-outline.svg"
+										width={18}
+										height={18}
+										alt="Star Icon"
+									/>
+								</p>
+							</div>
+						</div>
+						<div className="mt-6">
+							<p className="text-base text-gray-900">{template.description}</p>
+							<p className="mt-3 text-base text-gray-500">Sections: {template.sections}</p>
+							<p className="mt-3 text-base text-gray-500">Used: {template.useCount}</p>
+							<p className="mt-3 text-base text-gray-500">
+								Creator:{" "}
+								<Link href={`/creators/${template.creator}`} className="underline text-gray-500">
+									{template.creator}
+								</Link>
+							</p>
+						</div>
+						<div className="mt-6 flex justify-between items-center gap-6">
+							<button
+								type="button"
+								className="mt-3 text-white bg-gray-900 hover:opacity-75 rounded-lg text-base px-5 py-3 inline-flex justify-center w-full text-center"
+							>
+								Preview
+							</button>
+							<button
+								type="button"
+								className="mt-3 text-white bg-green-600 hover:opacity-75 rounded-lg text-base px-5 py-3 inline-flex justify-center w-full text-center"
+							>
+								Select
+							</button>
+						</div>
 					</div>
 				))}
 			</div>

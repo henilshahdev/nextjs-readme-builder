@@ -1,8 +1,14 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
+import allTemplates from "./templates.json";
+
 type TemplateType = {
 	title: string;
 	description: string;
+	stars: number;
+	sections: number;
+	useCount: number;
+	creator: string;
 };
 
 type TemplatesContextType = {
@@ -22,63 +28,24 @@ export const TemplatesProvider = ({ children }: { children: React.ReactNode }) =
 	const [templates, setTemplates] = useState<TemplateType[]>([]);
 
 	useEffect(() => {
-		console.log(currentTemplate);
 		switch (currentTemplate) {
 			case "Basic":
-				setTemplates([
-					{ title: "Open Source", description: "Open Source" },
-					{ title: "Instructor", description: "Instructor" },
-					{ title: "Onboarding", description: "Onboarding" },
-				]);
+				setTemplates(allTemplates.templates.Basic);
 				break;
 			case "Profile":
-				setTemplates([
-					{ title: "Basic", description: "Basic" },
-					{ title: "Intermediate", description: "Intermediate" },
-					{ title: "Advanced", description: "Advanced" },
-				]);
+				setTemplates(allTemplates.templates.Profile);
 				break;
 			case "Language":
-				setTemplates([
-					{ title: "JavaScript / TypeScript", description: "JavaScript / TypeScript" },
-					{ title: "Python", description: "Python" },
-					{ title: "Java", description: "Java" },
-					{ title: "Dart", description: "Dart" },
-					{ title: "PHP", description: "PHP" },
-					{ title: "C / C++", description: "C / C++" },
-				]);
-				break;
-			case "Profile":
-				setTemplates([
-					{ title: "Basic", description: "Basic" },
-					{ title: "Intermediate", description: "Intermediate" },
-					{ title: "Advanced", description: "Advanced" },
-				]);
+				setTemplates(allTemplates.templates.Language);
 				break;
 			case "Framework":
-				setTemplates([
-					{ title: "React.js", description: "React.js" },
-					{ title: "Next.js", description: "Next.js" },
-					{ title: "Angular.js", description: "Angular.js" },
-					{ title: "Vue.js", description: "Vue.js" },
-					{ title: "Flutter", description: "Flutter" },
-					{ title: "Android / iOS", description: "Android / iOS" },
-				]);
+				setTemplates(allTemplates.templates.Framework);
 				break;
 			case "Project":
-				setTemplates([
-					{ title: "Web App", description: "Web App" },
-					{ title: "Mobile App", description: "Mobile App" },
-					{ title: "API", description: "API" },
-					{ title: "Library", description: "Library" },
-				]);
+				setTemplates(allTemplates.templates.Project);
 				break;
 			case "Documentation":
-				setTemplates([
-					{ title: "Tutorials", description: "Tutorials" },
-					{ title: "Setup", description: "Setup" },
-					{ title: "User Guide", description: "User Guide" },
-				]);
+				setTemplates(allTemplates.templates.Documentation);
 				break;
 		}
 	}, [currentTemplate]);

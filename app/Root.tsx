@@ -13,7 +13,9 @@ const Root = ({
 	return (
 		<>
 			<Navbar />
-			<TemplatesProvider>{children}</TemplatesProvider>
+			<TemplatesProvider>
+				<div className="min-h-screen">{children}</div>
+			</TemplatesProvider>
 			<Footer />
 		</>
 	);
